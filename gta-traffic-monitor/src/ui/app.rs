@@ -6,7 +6,7 @@ use crate::config::AppConfig;
 use crate::monitor::SystemMonitor;
 use crate::plugin::PluginManager;
 use crate::skin::SkinManager;
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 
 /// Application state and lifecycle manager.
 ///
@@ -94,8 +94,6 @@ impl App {
         "GTA-TrafficMonitor"
     }
 }
-
-use std::path::Path;
 
 /// Get candidate directory for application data.
 fn dirs_candidate() -> Option<PathBuf> {

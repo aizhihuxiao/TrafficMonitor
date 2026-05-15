@@ -171,7 +171,8 @@ mod tests {
         // Should have at least some interfaces (e.g., loopback)
         let interfaces = monitor.interfaces();
         // On some CI systems there may be no interfaces, so just check it doesn't panic
-        assert!(!interfaces.is_empty() || interfaces.is_empty()); // may or may not have interfaces in CI
+        // On some CI systems there may be no interfaces, so just check it doesn't panic
+        let _ = interfaces;
     }
 
     #[test]
